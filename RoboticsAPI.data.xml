@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<RoboticsAPIData version="3">
+    <world>
+        <gravitation x="0.0" y="0.0" z="9.81"/>
+        <frame id="_d37b3513-b568-419a-98ca-71846ed00253" name="ReadyToCalibrate">
+            <transformation a="-1.5508203797342421" b="0.012741977250006269" c="3.1400739722045863" x="452.42385876038577" y="348.36217544715095" z="283.1412480812374"/>
+            <additionalInformation>
+                <info key="LastModificationTime" type="java.lang.Long" value="1549621975235"/>
+                <info base="LBR_iiwa_7_R800_1" controller="KUKA_Sunrise_Cabinet_1" device="LBR_iiwa_7_R800_1" tcpName="Flange" tool="Flange" type="com.kuka.roboticsAPI.deviceModel.TeachInformation">
+                    <tcpTransformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="0.0"/>
+                </info>
+            </additionalInformation>
+            <redundancyData>
+                <redundancy transformationProviderName="KUKA_Sunrise_Cabinet_1/LBR_iiwa_7_R800_1" type="com.kuka.roboticsAPI.deviceModel.LBRE1Redundancy">
+                    <info type="com.kuka.roboticsAPI.deviceModel.StatusTurnRedundancy$StatusParameter" value="2" valueType="java.lang.Integer"/>
+                    <info type="com.kuka.roboticsAPI.deviceModel.StatusTurnRedundancy$TurnParameter" value="76" valueType="java.lang.Integer"/>
+                    <info type="com.kuka.roboticsAPI.deviceModel.LBRE1Redundancy$E1Parameter" value="-0.10968969306569962" valueType="java.lang.Double"/>
+                </redundancy>
+            </redundancyData>
+        </frame>
+    </world>
+    <objectTemplates>
+        <toolTemplate class="" defaultMotionFrameRef="/Adapterplatte/Greifer" name="EGripper">
+            <frames>
+                <frame id="_61897c53-0272-4747-a929-8d61cfc850db" name="Adapterplatte">
+                    <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="10.5"/>
+                    <frames>
+                        <frame id="_dfda53bc-42e4-4e64-a6ee-f6ed1e5d6ee4" name="Greifer">
+                            <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="94.5"/>
+                            <frames>
+                                <frame id="_d9c4c98d-ea9f-43ca-83b3-721ef4903608" name="Hebel">
+                                    <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="100.0" z="0.0"/>
+                                </frame>
+                            </frames>
+                        </frame>
+                        <frame id="_8a61b522-7fcc-475b-aad7-fbbf5524e7bd" name="SyncDorn">
+                            <transformation a="0.0" b="0.0" c="0.0" x="-57.24" y="0.0" z="57.9"/>
+                        </frame>
+                    </frames>
+                </frame>
+            </frames>
+            <additionalInformation>
+                <info key="ID" type="java.lang.String" value="9a8d375c-e54e-431a-8e9b-12996a205797"/>
+            </additionalInformation>
+            <loadData cogA="0.0" cogB="0.0" cogC="0.0" cogX="-5.777968980785261" cogY="5.802936065388206" cogZ="9.507831603950704" inertiaX="0.0" inertiaY="0.0" inertiaZ="0.0" mass="0.5542592634642248"/>
+        </toolTemplate>
+    </objectTemplates>
+    <processDataContainer>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Origin" id="Origin" value="372.20039105561744|555.9846312706367|260.63500073836485|-0.8535673982511843|0.014676283150195576|-3.1379722785887534"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Assembly" id="Assembly" value="-11.701342220677361|-158.3414639961917|-91.24165635792505|-1.55102790366915|-0.008460519600870565|6.265371439926874"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot1" id="Parkingspot1" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot2" id="Parkingspot2" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot3" id="Parkingspot3" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot4" id="Parkingspot4" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot5" id="Parkingspot5" value="13.244718617703938|-30.75749629085624|-106.31243276290644|0.003603264648706306|-0.0012529121025994672|2.234692039788655E-4"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export1" id="Export1" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export2" id="Export2" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export3" id="Export3" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export4" id="Export4" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import1" id="Import1" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import2" id="Import2" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import3" id="Import3" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import4" id="Import4" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Wheel1" id="Wheel1" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Wheel2" id="Wheel2" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Body" id="Body" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Window" id="Window" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Roof" id="Roof" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Door" id="Door" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Trunk" id="Trunk" value=""/>
+    </processDataContainer>
+</RoboticsAPIData>
