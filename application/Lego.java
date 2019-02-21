@@ -24,6 +24,7 @@ import application.tools.Measure;
 import application.tools.Points;
 
 import application.core.Devices;
+import application.core.GuiKeys;
 import application.core.Logging;
 import application.core.Movement;
 
@@ -54,6 +55,8 @@ public class Lego extends RoboticsAPIApplication {
 		Logging.setLogger(getLogger());
 		Devices.setUI(getApplicationUI());
 		Devices.setApp(getApplicationData());
+		
+		GuiKeys.createGuiKeys();
 		
 		Points.loadPoints();
 	}
