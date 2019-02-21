@@ -64,26 +64,31 @@ public class Points {
 
 	
 	public static String parseFrame(Frame aFrame){
+		Frame vFrameToSave = aFrame.copy();
 		if(aFrame != Point.Origin.getPosition()){
-			aFrame.setX(aFrame.getX()-Point.Origin.getPosition().getX());
-			aFrame.setY(aFrame.getY()-Point.Origin.getPosition().getY());
-			aFrame.setZ(aFrame.getZ()-Point.Origin.getPosition().getZ());
+			vFrameToSave.setX(vFrameToSave.getX()-Point.Origin.getPosition().getX());
+			vFrameToSave.setY(vFrameToSave.getY()-Point.Origin.getPosition().getY());
+			vFrameToSave.setZ(vFrameToSave.getZ()-Point.Origin.getPosition().getZ());
 			
-			aFrame.setAlphaRad(aFrame.getAlphaRad()-Point.Origin.getPosition().getAlphaRad());
-			aFrame.setBetaRad(aFrame.getBetaRad()-Point.Origin.getPosition().getBetaRad());
-			aFrame.setGammaRad(aFrame.getGammaRad()-Point.Origin.getPosition().getGammaRad());			
+			vFrameToSave.setAlphaRad(vFrameToSave.getAlphaRad()-Point.Origin.getPosition().getAlphaRad());
+			vFrameToSave.setBetaRad(vFrameToSave.getBetaRad()-Point.Origin.getPosition().getBetaRad());
+			vFrameToSave.setGammaRad(vFrameToSave.getGammaRad()-Point.Origin.getPosition().getGammaRad());			
 		}
-		return aFrame.getX() + "|" + aFrame.getY() + "|" + aFrame.getZ() + "|" + aFrame.getAlphaRad() + "|" + aFrame.getBetaRad() + "|" + aFrame.getGammaRad();
+		return vFrameToSave.getX() + "|" + vFrameToSave.getY() + "|" + vFrameToSave.getZ() + "|" + vFrameToSave.getAlphaRad() + "|" + vFrameToSave.getBetaRad() + "|" + vFrameToSave.getGammaRad();
 	}
 	
 	public static void loadPoints(){
 		for(Point vPoint: Point.values()){
 			
-			if( getApp().tryGetProcessData(vPoint.name()) != null && !getApp().tryGetProcessData(vPoint.name()).getValue().toString().isEmpty()){
-				log("Points", vPoint.name() + ": " + getApp().tryGetProcessData(vPoint.name()).getValue());
+			if( getApp().tryGetProcessData(vPoint.name()) != null && !getApp().getProcessData(vPoint.name()).getValue().toString().isEmpty()){
+				log("Points", vPoint.name() + ": " + getApp().getProcessData(vPoint.name()).getValue());
 				
-				String[] vValuesOfFrame = getApp().tryGetProcessData(vPoint.name()).getValue().toString().split("\\|");
+				String[] vValuesOfFrame = getApp().getProcessData(vPoint.name()).getValue().toString().split("\\|");
 				log("Points", vPoint.name() + ": " + Arrays.toString(vValuesOfFrame));
+				
+				if(vPoint == Point.Origin){
+					vPoint.setPosition(new Frame(0,0,0,0,0,0));
+				}
 				
 				vPoint.setPosition(new Frame(
 						Double.parseDouble(vValuesOfFrame[0]) + getOrigin().getX(), 
@@ -100,7 +105,7 @@ public class Points {
 	
 	public static void calibrate(){
 		log("Kalibrieren", "Move to ReadyToCalibrate");
-		getLbr().move(ptp(getApp().getFrame("/ReadyToCalibrate")).setJointVelocityRel(0.25));
+		linearMoveToPoint(getApp().getFrame("/ReadyToCalibrate"), 0.25);
 		closeGripper();
 
 		log("Kalibrieren", "Holding position in impedance control mode");
@@ -133,7 +138,6 @@ public class Points {
 		}
 		
 		log("Points", "Set Point" + vCurrentPoint.name() );
-		getLbr().move(ptp(getApp().getFrame("/ReadyToCalibrate")).setJointVelocityRel(0.25));
 
 		Movement.freeMovementStart();
 		
