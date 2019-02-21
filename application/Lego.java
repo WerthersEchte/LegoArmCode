@@ -102,10 +102,7 @@ public class Lego extends RoboticsAPIApplication {
 		Frame vBench = vOverBench.copy();
 		vBench.setZ(vBench.getZ()-100);
 		
-		getLbr().move(
-				lin(vBench)
-					.setCartVelocity(30).setMode(cartImpCtrlMode)
-				);
+		linearMoveToPoint(vBench,30,cartImpCtrlMode);
 		closeGripper();
 		
 		linearMoveToPoint(vOverBench, 150);
@@ -153,10 +150,8 @@ public class Lego extends RoboticsAPIApplication {
 		cartImpCtrlMode.parametrize(CartDOF.Z).setDamping(0.1);
 		cartImpCtrlMode.parametrize(CartDOF.Z).setStiffness(1.0);
 		
-		getLbr().move(
-				lin(vParkPosition)
-					.setCartVelocity(30).setMode(cartImpCtrlMode)
-				);
+
+		linearMoveToPoint(vParkPosition,30,cartImpCtrlMode);
 		openGripper();
 		
 		linearMoveToPoint(vOverParkPosition, 150);
