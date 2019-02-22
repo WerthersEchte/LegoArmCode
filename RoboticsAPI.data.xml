@@ -46,27 +46,27 @@
         </toolTemplate>
     </objectTemplates>
     <processDataContainer>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Origin" id="Origin" value="372.20039105561744|555.9846312706367|260.63500073836485|-0.8535673982511843|0.014676283150195576|-3.1379722785887534"/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Assembly" id="Assembly" value="-11.701342220677361|-158.3414639961917|-91.24165635792505|-1.55102790366915|-0.008460519600870565|6.265371439926874"/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot1" id="Parkingspot1" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot2" id="Parkingspot2" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot3" id="Parkingspot3" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot4" id="Parkingspot4" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot5" id="Parkingspot5" value="13.244718617703938|-30.75749629085624|-106.31243276290644|0.003603264648706306|-0.0012529121025994672|2.234692039788655E-4"/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Export1" id="Export1" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Export2" id="Export2" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Export3" id="Export3" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Export4" id="Export4" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Import1" id="Import1" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Import2" id="Import2" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Import3" id="Import3" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Import4" id="Import4" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Wheel1" id="Wheel1" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Wheel2" id="Wheel2" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Body" id="Body" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Window" id="Window" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Roof" id="Roof" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Door" id="Door" value=""/>
-        <processData dataType="java.lang.String" defaultValue="0" displayName="Trunk" id="Trunk" value=""/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Origin" id="Origin" value="360.7169070179362|560.877323995919|260.30961492009067|-0.8034934487766277|0.01324396326157585|-3.1364852025665653"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Assembly" id="Assembly" value="107.1722213492126|-112.0476207134723|-95.76927388248401|-1.5294106013390076|-0.009446587240571222|6.263370624240826"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot1" id="Parkingspot1" value="225.20970908658367|-17.131229203151847|-109.84167774268681|0.053242927338685964|9.198522331089025E-4|-0.0018497922123947852"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot2" id="Parkingspot2" value="177.20854534784658|-16.73072624745005|-109.70922746031988|0.04121091501936491|8.640769351374016E-4|-0.001888179353413566"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot3" id="Parkingspot3" value="128.58105569192563|-17.066973057498856|-109.31256050907317|0.034397041389798044|-2.2466668577562562E-4|-0.0015450827404439593"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot4" id="Parkingspot4" value="81.01758656339926|-16.706990488680596|-108.96998716816742|0.028515126225866383|9.870235399207072E-4|-0.0023688449616909857"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Parkingspot5" id="Parkingspot5" value="33.50047204934283|-16.723558957432537|-108.65829236165914|0.038350705636492566|0.0017017144738804297|-0.0019580290357836816"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export1" id="Export1" value="14.833305730620623|-177.1840028417692|-107.01560590197795|1.561382611079951|-0.0157485062037353|0.009058402725740766"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export2" id="Export2" value="68.99475519926523|-175.8028039920561|-107.27782653725757|1.576785162033613|-0.015465057486230534|0.009044899041045884"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export3" id="Export3" value="143.4251706944844|-173.78712588659843|-108.00538335367631|1.575630213617118|-0.01608301968060932|0.008072706328497326"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Export4" id="Export4" value="209.49195016513926|-173.4387432687541|-108.60221203958722|1.584220630191051|-0.016776868541813178|0.006602856981499983"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import1" id="Import1" value="8.41930908590875|-225.64147067492752|-106.56783366541038|-1.5634661763337465|-0.008769355846486814|6.258282253359648"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import2" id="Import2" value="64.24721641208373|-226.79243155003334|-107.1200846279927|-1.584837003650928|-0.008999957713834071|6.26158618909288"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import3" id="Import3" value="126.97717634597315|-227.9306961170604|-107.48743609899981|-1.576620186485427|-0.0091692193409675|6.260865515295954"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Import4" id="Import4" value="202.60733763528694|-229.4773261853315|-108.07473520308872|-1.5577182718501896|-0.00862889423220607|6.26120941900224"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Wheel1" id="Wheel1" value="8.045109369857443|-88.24953431572783|-119.58514032807514|-1.5438891167971598|-0.011242536420465209|6.254825957701549"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Wheel2" id="Wheel2" value="7.953139931705991|-120.54297068198363|-119.60869970894504|-1.5331423774597794|-0.010613737112410749|6.25721831745545"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Body" id="Body" value="190.05047638327767|-87.93548609493715|-121.47368262478022|1.5758256585217238|-0.011028574254794882|0.017165244828992066"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Window" id="Window" value="205.98174025533024|-121.48846024415244|-121.34517150899032|0.034539164072788675|0.010549173555513705|6.277235609107917"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Roof" id="Roof" value="45.28187503584348|-88.7398177560958|-120.12689196216687|-1.5396139465179435|-0.010338306201947128|6.257284602710524"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Door" id="Door" value="37.75985362135585|-117.50514434091465|-120.3038798357909|0.02908795885817872|0.010950986847202698|6.276178958995879"/>
+        <processData dataType="java.lang.String" defaultValue="0" displayName="Trunk" id="Trunk" value="175.52439306734422|-120.70358016869969|-121.4012132116716|1.5476371087646121|-0.01272991384085164|0.017654398732875887"/>
     </processDataContainer>
 </RoboticsAPIData>

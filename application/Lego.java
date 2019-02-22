@@ -28,6 +28,7 @@ import application.core.GuiKeys;
 import application.core.Logging;
 import application.core.Movement;
 
+import com.kuka.generated.ioAccess.FlexFellowIOGroup;
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
 import com.kuka.roboticsAPI.deviceModel.LBR;
 import com.kuka.roboticsAPI.geometricModel.CartDOF;
@@ -161,7 +162,13 @@ public class Lego extends RoboticsAPIApplication {
 		
 	}
 	
-	public void run() {		
+	public void run() {
+		
+		Devices.getIOs().setSignalLightRed(false);
+		Devices.getIOs().setSignalLightGreen(false);
+		Devices.getIOs().setSignalLightBlue(false);
+		Devices.getIOs().setSignalLightYellow(false);
+		
 		int direction = 0;
 		do{
 			List<String> vOptions = new ArrayList<String>();
@@ -171,11 +178,13 @@ public class Lego extends RoboticsAPIApplication {
 				vOptions.add("Messen");
 				vOptions.add("Set Points");
 			}
-			
+
+			Devices.getIOs().setSignalLightBlue(true);
 			direction = getApplicationUI().displayModalDialog(
 				ApplicationDialogType.QUESTION,
 				"Was soll gemacht werden",
 				vOptions.toArray(new String[vOptions.size()]) );
+			Devices.getIOs().setSignalLightBlue(false);
 		
 			switch (direction) {
 				case 0:

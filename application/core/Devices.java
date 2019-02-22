@@ -1,5 +1,6 @@
 package application.core;
 
+import com.kuka.generated.ioAccess.FlexFellowIOGroup;
 import com.kuka.roboticsAPI.applicationModel.IApplicationData;
 import com.kuka.roboticsAPI.controllerModel.Controller;
 import com.kuka.roboticsAPI.deviceModel.LBR;
@@ -14,6 +15,8 @@ public class Devices {
 	private static Tool Tool;
 	private static EGripper Gripper;
 	
+	private static FlexFellowIOGroup IOGroup;
+	
 	private static IApplicationUI UI;
 	private static IApplicationData App;
 	
@@ -22,6 +25,7 @@ public class Devices {
 	}
 	public static void setControll(Controller controller) {
 		Controller = controller;
+		IOGroup = new FlexFellowIOGroup(Controller);
 	}
 	public static LBR getLbr() {
 		return Lbr;
@@ -53,6 +57,9 @@ public class Devices {
 	public static IApplicationData getApp() {
 		return App;
 	}
-	
+
+	public static FlexFellowIOGroup getIOs() {
+		return IOGroup;
+	}
 
 }

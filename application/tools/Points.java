@@ -70,10 +70,19 @@ public class Points {
 			vFrameToSave.setY(vFrameToSave.getY()-Point.Origin.getPosition().getY());
 			vFrameToSave.setZ(vFrameToSave.getZ()-Point.Origin.getPosition().getZ());
 			
+			double vWinkel = Point.Origin.getPosition().getAlphaRad();
+
+			double vNewX = vFrameToSave.getY() * Math.sin(vWinkel) + vFrameToSave.getX() * Math.cos(vWinkel);
+			double vNewY = vFrameToSave.getY() * Math.cos(vWinkel) - vFrameToSave.getX() * Math.sin(vWinkel);
+			
+			vFrameToSave.setX(vNewX);
+			vFrameToSave.setY(vNewY);
+			
 			vFrameToSave.setAlphaRad(vFrameToSave.getAlphaRad()-Point.Origin.getPosition().getAlphaRad());
 			vFrameToSave.setBetaRad(vFrameToSave.getBetaRad()-Point.Origin.getPosition().getBetaRad());
 			vFrameToSave.setGammaRad(vFrameToSave.getGammaRad()-Point.Origin.getPosition().getGammaRad());			
 		}
+		log("Point saved", vFrameToSave.toString());
 		return vFrameToSave.getX() + "|" + vFrameToSave.getY() + "|" + vFrameToSave.getZ() + "|" + vFrameToSave.getAlphaRad() + "|" + vFrameToSave.getBetaRad() + "|" + vFrameToSave.getGammaRad();
 	}
 	
@@ -90,9 +99,14 @@ public class Points {
 					vPoint.setPosition(new Frame(0,0,0,0,0,0));
 				}
 				
+				double vWinkel = Point.Origin.getPosition().getAlphaRad();
+				
+				double vOldX = Double.parseDouble(vValuesOfFrame[0]);
+				double vOldY = Double.parseDouble(vValuesOfFrame[1]);
+								
 				vPoint.setPosition(new Frame(
-						Double.parseDouble(vValuesOfFrame[0]) + getOrigin().getX(), 
-						Double.parseDouble(vValuesOfFrame[1]) + getOrigin().getY(),  
+						vOldX * Math.cos(vWinkel) - vOldY * Math.sin(vWinkel) + getOrigin().getX(),
+						vOldX * Math.sin(vWinkel) + vOldY * Math.cos(vWinkel) + getOrigin().getY(),  
 						Double.parseDouble(vValuesOfFrame[2]) + getOrigin().getZ(),  
 						Double.parseDouble(vValuesOfFrame[3]) + getOrigin().getAlphaRad(),  
 						Double.parseDouble(vValuesOfFrame[4]) + getOrigin().getBetaRad(),  
@@ -105,7 +119,7 @@ public class Points {
 	
 	public static void calibrate(){
 		log("Kalibrieren", "Move to ReadyToCalibrate");
-		linearMoveToPoint(getApp().getFrame("/ReadyToCalibrate"), 0.25);
+		linearMoveToPoint(getApp().getFrame("/ReadyToCalibrate"), 100);
 		closeGripper();
 
 		log("Kalibrieren", "Holding position in impedance control mode");
@@ -188,7 +202,7 @@ public class Points {
 			List<String> vPage = new ArrayList<String>();
 			vPage.add("Zurück");
 			vPage.add("Vor");
-			vPage.addAll(vNames.subList(page, page+5));
+			vPage.addAll(vNames.subList(page, Math.min(page+5, vNames.size())));
 			
 			direction = getUI().displayModalDialog(
 					ApplicationDialogType.QUESTION,
